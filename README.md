@@ -29,32 +29,18 @@ Before running the application, make sure you have:
 
 ## Project Setup
 
-1. Create a new Vite project:
+1. Clone the repository:
 ```bash
-npm create vite@latest movie-browser
+git clone <repository-url>
 cd movie-browser
 ```
 
 2. Install dependencies:
 ```bash
 npm install
-npm install react-router-dom nanoid
 ```
 
-3. Setup Tailwind CSS:
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-4. Clone the repository (alternative to steps 1-3):
-```bash
-git clone <repository-url>
-cd movie-browser
-npm install
-```
-
-5. Create a `config/index.js` file in the root directory and add your TMDB API configuration:
+3. Create a `config/index.js` file in the root directory and add your TMDB API configuration:
 ```javascript
 export const API_KEY = 'your_tmdb_api_key';
 export const TMDB_REQUEST_URL = 'https://api.themoviedb.org/3';
@@ -85,34 +71,6 @@ src/
 │   └── FavoriteContext.jsx
 ├── Layout.jsx
 └── App.jsx
-```
-
-## Dependencies
-
-```json
-{
-  "dependencies": {
-    "nanoid": "^5.0.9",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.14.0",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.0.5"
-  }
-}
 ```
 
 ## Key Features Implementation
@@ -170,22 +128,13 @@ src/
    - Add movie trailers
 
 3. **Technical Improvements**
-   - Add error boundaries
-   - Implement proper loading states
-   - Add unit tests
    - Implement proper TypeScript support
    - Add proper error handling for API failures
 
 4. **UI/UX Improvements**
    - Add animations for state changes
-   - Implement skeleton loading
-   - Add tooltips for better user guidance
    - Improve accessibility
 
 ## Contributing
 
 Feel free to submit issues, fork the repository, and create pull requests for any improvements.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
