@@ -1,0 +1,60 @@
+.carouselItem {
+    position: relative;
+    width: 190px;
+    height: 285px;
+  }
+  
+  .carouselItem img {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+  
+  .carouselItem svg {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    width: 50px;
+    height: 48px;
+    background-color: var(--primaryColor100);
+    padding: 10px;
+    color: black;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .carouselItem svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  
+  .carouselItem:hover img {
+    border: 5px solid var(--primaryColor100);
+    transform: scale(1.1);
+  }
+  
+  .imgDescription {
+    padding-top: 15px;
+    position: absolute;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 210px;
+    margin-left: -5px;
+    font-size: var(--text-lg);
+  }
+  
+  .star {
+  position: absolute; 
+  top: 38px;
+  left: 150px;
+  width: 1cm; 
+  height: 1cm;
+  cursor: pointer;
+  z-index: 10; 
+  background: none; 
+  }
