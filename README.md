@@ -38,16 +38,8 @@ cd movie-browser
 2. Install dependencies:
 ```bash
 npm install
-```
 
-3. Create a `config/index.js` file in the root directory and add your TMDB API configuration:
-```javascript
-export const API_KEY = 'your_tmdb_api_key';
-export const TMDB_REQUEST_URL = 'https://api.themoviedb.org/3';
-export const TMDB_IMAGE_URL = 'https://image.tmdb.org/t/p';
-```
-
-6. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
