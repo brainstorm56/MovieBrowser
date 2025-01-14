@@ -1,39 +1,98 @@
-/* Navbar Styles */
 .navbar {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 10px 20px;
-    border-bottom: 2px solid #333;
-    height: 100px;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px 20px;
+  border-bottom: 2px solid #333;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1020px) {
+  .hamburger {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  
-  @media (max-width:1000px) {
-    .hide-on-small  {
-      display: none;
-    }
-  }
-  .navbar-logo {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    position: absolute;
-    left: 20px;
-  }
-  
+
   .navbar-links {
-    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    text-align: right;
+    transform: none;
+    border: 2px solid #333;
+    border-top: none;
+    min-width: 200px;
+    z-index: 999;
+  }
+
+  .navbar-links.active {
     display: flex;
-    gap: 40px;
-    margin: 0 auto;
-    padding: 0;
   }
-  
-  .navbar-link {
-    text-decoration: none;
-    font-size: 2rem;
+
+  /* Hamburger animation classes */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
   }
-  
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+}
