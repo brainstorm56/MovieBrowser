@@ -80,7 +80,7 @@ function Search() {
 
   return (
     <>
-      <div className="bg-black py-3">
+      <div className="bg-black py-3 mb-20">
 
         {/* Search Box */}
 
