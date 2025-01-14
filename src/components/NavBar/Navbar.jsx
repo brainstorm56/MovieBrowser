@@ -6,8 +6,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         {/* app Logo */}
-        
-        <Link to="/" className="navbar-logo">
+
+        <Link to="/" className="navbar-logo hide-on-small">
           🎥 MovieBrowser
         </Link>
 
