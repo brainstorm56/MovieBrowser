@@ -53,7 +53,7 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="bg-black grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-14 p-14 pb-10">
+      <div className="bg-black grid grid-cols-1 custom-sm:grid-cols-2  md:grid-cols-3 custom-md:grid-cols-4 custom-lg:grid-cols-5  gap-14 p-14 pb-10">
         {
           movies.map((movie) => (
             <MovieCard key={nanoid()} info={movie} />
