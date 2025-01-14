@@ -111,16 +111,7 @@ function Search() {
         </div>
       </div>
 
-      {/* loader */}
 
-      {loading && (
-        <div
-          style={{ backgroundColor: "#030303", paddingTop: 50 }}
-          className="flex justify-center "
-        >
-          <img src="/loader.gif" alt="loading..." />
-        </div>
-      )}
     </>
   );
 }
