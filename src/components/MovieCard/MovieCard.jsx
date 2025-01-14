@@ -32,6 +32,8 @@ function MovieCard({info}) {
     return null;
   }
 
+  const titleName = (info.title || info.original_title)
+
   return (
 <div className= 'carouselItem'>
       {/* favorite Star */}
@@ -46,10 +48,10 @@ function MovieCard({info}) {
         width={190}
         height={285}
       />
-      
+
       {/* movie Description */}
       <p className='imgDescription'>
-        {info.title || info.original_title}    ({ info.release_date.slice(0,4)})
+        {(titleName.length>15)?(titleName.slice(0,15)+'...'):(titleName)}    ({ info.release_date.slice(0,4)})
       </p>
     </div>
   )
